@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$corTexto: whitesmoke;
+$corBackground: #78d5d7;
+$corAzulEscuro: #0b2f46;
+$corAzulMedio: #165f8d;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+// .backG1 {
+//   background-position: 0px 0px;
+//   background-repeat: repeat-x;
+//   animation: backAnim 15s linear infinite alternate forwards;
+//   background-image: url("../img/deserto.jpg");
+// }
+
+// .backG2 {
+//   background-position: 0px 0px;
+//   background-repeat: repeat-x;
+//   animation: backAnim 15s linear infinite alternate forwards;
+//   background-image: url("../img/chuva.jpg");
+// }
+
+// .mainbackG {
+
+//   background-repeat: no-repeat;
+// }
+
+body {
+  color: $corTexto;
+  background-color: $corBackground;
+  text-shadow: 1px 1px black;
+}
+
+.container-principal {
+  margin-top: 150px;
+  animation: 1.5s ease-out 0s 1 aparecer, 1s ease-out 0s 1 deslizarCimaBaixo;
+
+  // animation: 1s ease-out 0s 1 deslizarCimaBaixo;
+}
+
+.mainTitle {
+  text-shadow: 2px 2px $corAzulEscuro;
+  text-align: center;
+}
+
+.input-localizaçao {
+  margin: auto;
+  margin-top: 30px;
+  width: 80%;
+}
+
+#match-list {
+  width: 80%;
+  margin: auto;
+  margin-top: -16px;
+}
+
+.button-localizacao {
+  background-color: $corAzulMedio;
+
+  border-color: $corAzulMedio;
+  color: white;
+
+  &:hover {
+    background-color: $corAzulEscuro;
+    border-color: $corAzulEscuro;
+  }
+}
+
+.conteudo-dados {
+  opacity: 0%;
+  .tempo-descricao {
+    font-size: 1em;
+    h4 {
+      text-align: center;
+    }
+  }
+  .tempo-icone {
+    text-align: center;
+    margin-top: 20px;
+
+    i {
+      font-size: 6rem;
+    }
+  }
+}
+
+.main-temp {
+  margin-top: 35px;
+  text-align: center;
+  .temp-col {
+    margin-top: 10px;
+  }
+}
+
+.sugestoes {
+  color: $corAzulEscuro; /* no underline */
+  text-shadow: none;
+
+  h4 {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0px;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .card {
+    height: 38px;
+    padding: 0px;
+    // padding-top: 8px;
+    // padding-left: 5px;
+  }
+
+  .card-body {
+    padding: 0px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: whitesmoke;
+    .card {
+      background-color: $corAzulEscuro;
+    }
+  }
+}
+// ^Media Queries
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .mainTitle {
+    h2 {
+      font-size: 3em;
+    }
+  }
+
+  .main-temp {
+    .temp {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.conteudo-dados {
+  margin-top: 10px;
+
+  .tempo-descricao {
+    h4 {
+      font-size: 2em;
+    }
+  }
+  .tempo-icone {
+    text-align: center;
+
+    i {
+      font-size: 10rem;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .input-localizaçao {
+    width: 65%;
+  }
+
+  #match-list {
+    width: 65%;
+  }
+
+  .mainTitle {
+    h2 {
+      font-size: 4em;
+    }
+  }
+
+  .conteudo-dados {
+    .tempo-descricao {
+      h4 {
+        font-size: 3em;
+      }
+      .tempo-icone {
+        text-align: center;
+
+        i {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
+
+// KEYFRAMES
+
+@keyframes aparecer {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes deslizarCimaBaixo {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes tirarMargem {
+  0% {
+    margin-top: 150px;
+  }
+  100% {
+    margin-top: 50px;
+  }
+}
+
+@keyframes backAnim {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
